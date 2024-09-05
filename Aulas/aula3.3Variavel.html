@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="incrementar()">Contar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var contador =0;
+    var contadorEmDez = 10;
+
+    function incrementar(){
+        contador = contador+ 1
+        contadorEmDez = contadorEmDez +10;
+
+        div_mensagem.innerHTML = `Contagem atual é ${contador} <br> o contador em 10 é ${contadorEmDez}`
+        
+
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variavel local do input</title>
+</head>
+<body>
+    Digite seu nome:
+    <input id="ipt_nome"/>
+    Digite seu email:
+    
+    <input  id="ipt_email"/>
+    <button onclick="cadastro()">Cadastrar</button>
+</body>
+
+</html>
+
+<script>
+    function cadastro(){
+        var nome = ipt_nome.value
+        var email = ipt_email.value
+        alert("Seu nome é " +nome+  " seu email é " + email)
+        alert(`Seu nome é ${nome} e seu email é ${email}`)
+    }
+</script>

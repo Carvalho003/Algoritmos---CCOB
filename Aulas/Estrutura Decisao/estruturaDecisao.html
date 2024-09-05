@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Decisão</title>
+</head>
+<body>
+    Digite um numero:
+    <input type="number" id="ipt_numero">
+    <button onclick="verificar()">Verificar</button>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var numero = Number(ipt_numero.value);
+
+        if(numero > 42){
+            alert("O numero é maior que 42")
+        }
+
+        if(numero == 42){
+            alert("O numero é igual a 42")
+        }
+
+        if(numero < 42) {
+            alert("O numero é menor que 42")
+        }
+    }
+</script>

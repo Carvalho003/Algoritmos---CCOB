@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Definindo e reconhecendo os caracteres que serão utilizados -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tamanho de tela, ela consegue se auto-redimensionar  -->
+    <title>Aula 1</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{
+            background-color: rgb(235, 230, 224);      
+            
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            flex-direction: column;
+        }
+        #titulo{
+            margin-top: 1rem;
+        }
+        #group{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem;
+            margin: 10px 10px;
+            border-radius: 1rem;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        img{
+            height: 20rem;
+            width: 20rem;
+            
+        }
+
+        button{
+            width: 10rem;
+            height: 3rem;
+            border-radius: 2rem;
+            border: none;
+            background-color: rgb(73, 168, 140);
+            font-size: 15px;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 5px;
+            transition: all 0.4s;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #parar{
+            background-color: rgb(168, 73, 73);
+        }
+
+        button:hover{
+            
+            background-color: rgb(255, 255, 255);
+            font-size: 15px;
+            color: rgb(73, 168, 140);
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            padding: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #parar:hover{
+            
+            background-color: rgb(255, 255, 255);
+            font-size: 15px;
+            color: rgb(168, 73, 73);
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            padding: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        @keyframes rodarTornado {
+            from{
+                transform: rotate3d(1,2,3, 360deg);
+                
+            }
+            to{
+                transform: rotate3d(1,2,3,0deg);
+                
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="group">
+        <h1 id="titulo">Meu primeiro comando dentro do body</h1>
+        <img id="toninho" src="./images/tonin.jpg" alt="">
+    </div>
+    <div id="btns">
+        <button onclick="rodar()">Rodar o Tornado</button>
+        <button id="parar" onclick="parar()">Parar o Tornado</button>
+    </div>
+</body>
+<script>
+    let image = document.getElementById('toninho')
+    let rodar = () => {
+        image.style.animation = "rodarTornado 5s infinite alternate"
+        // setTimeout(() =>{
+            
+        // }, 1000)
+    }
+    let parar = () => {
+        image.style.animation = ""
+        image.style.animation = "rodarTornado 1s linear";
+        setTimeout(() => {
+            image.style.animation = ""
+        }, 1000)
+    }
+</script>
+</html>
+

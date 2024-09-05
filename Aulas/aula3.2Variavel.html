@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variável Local</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    button{
+        width: 5rem;
+        height: 2rem;
+        background-color: rgb(56, 117, 114);
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 2rem;
+    }
+    #numero{
+        animation: rodar 2s infinite   ;
+        animation-timing-function: linear;
+    }
+
+    @keyframes rodar{
+        from{
+            transform: rotateZ(0deg);
+        }
+        to{
+            transform: rotateZ(360deg);
+        }
+    }
+</style>
+<body onload="incrementar()">
+    <button onclick="incrementar()">Contar</button>
+    
+    <h1 id="numero">0</h1>
+</body>
+</html>
+<script>
+    var contador = 0;
+    function incrementar(){
+        contador = contador+1;
+        // alert("Contagem atual " + contador);
+        
+            setTimeout(() => {
+                numero.innerText = Number(numero.innerText) + 1
+                
+                incrementar()
+            },500)
+        console.log
+    }
+</script>

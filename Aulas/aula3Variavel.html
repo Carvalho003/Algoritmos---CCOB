@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variável Local</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        width: 5rem;
+        height: 2rem;
+        background-color: rgb(56, 218, 209);
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 2rem;
+    }
+</style>
+<body>
+    <button onclick="incrementar()">Contar</button>
+</body>
+</html>
+<script>
+    function incrementar(){
+        var contador = 0;
+        contador = contador+1;
+        alert("Contagem atual " + contador);
+    }
+</script>
