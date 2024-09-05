@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total de Despesas</title>
+</head>
+<body>
+    Informe a quantidade de energia consumida(kWh):
+    <input type="number" id="ipt_energia">
+    <br>
+    Informe a bandeira tarifária de energia:
+    <input type="text" id="ipt_bandeira">
+    <br>
+    Informe o volume de água consumido em Litros:
+    <input type="number" id="ipt_agua">
+    <br>
+    Informe a quantidade de vazamentos de água:
+    <input type="number" id="ipt_vazamentos">
+    <br>
+    Informe o volume de gás consumido em Litros:
+    <input type="number" id="ipt_gas">
+    <br>
+    Quantidade de MB do plano de internet:
+    <input type="number" id="ipt_internet">
+    <br>
+    Você possui uma linha telefônica no plano de internet:
+    <input type="text" id="ipt_telefone">
+    <br>
+    <button onclick="calcularFixas()">Calcular Despesas Fixas</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function calcularFixas(){
+        var energia = Number(ipt_energia.value);
+        var bandeira = ipt_bandeira.value;
+        //assumindo como bandeira vermelha
+        var valorEnergia =  energia;
+        if(bandeira == "verde"){
+            valorEnergia = energia * 0.75;
+        }
+
+        if(bandeira == "amarela"){
+            valorEnergia = energia * 0.9;
+        }
+
+        if(energia <= 50){
+            valorEnergia = valorEnergia * 0.9;
+        }
+
+        var agua = Number(ipt_agua.value);
+        var valorAgua = agua * 3.5;
+        var vazamentos = Number(ipt_vazamentos.value);
+
+        if(vazamentos > 0){
+            valorAgua = valorAgua + (vazamentos * 10);
+        }
+
+        var gas = Number(ipt_gas.value);
+        var valorGas = gas * 2.5;
+
+        var mbs = Number(ipt_internet.value);
+        var valorInternet = mbs * 0.8;
+        var linhaTelefonica = ipt_telefone.value;
+
+        if(linhaTelefonica == "sim"){
+            valorInternet = valorInternet * 1.25;
+        }else{
+            valorInternet = valorInternet * 0.925;
+        }
+
+        var gastoTotal = valorEnergia + valorAgua + valorGas + valorInternet;
+        // Com o consumo de AA kWh na bandeira BB, a conta de energia totaliza R$ CC. 
+        // Com o consumo de DD litros de água contendo EE vazamentos, a conta de água totaliza R$ FF. 
+        // Com o consumo de GG litros de gás, a conta de gás totaliza R$ HH. 
+        // Com o consumo de II MB de internet, o valor do plano de internet/telefone totaliza R$ JJ. 
+        // Gasto total de despesas mensal: R$ KK. 
+
+        div_msg.innerHTML = `Com o consumo de ${energia} kWh na bandeira ${bandeira}, a conta de energia totaliza R$ ${valorEnergia}.<br>
+        Com o consumo de ${agua} litros de água contendo ${vazamentos} vazamentos, a conta de água totaliza R$ ${valorAgua}.<br>
+        Com o consumo de ${gas} litros de gás, a conta de gás totaliza R$ ${valorGas}.<br> 
+        Com o consumo de ${mbs} MB de internet, o valor do plano de internet/telefone totaliza R$ ${valorInternet}.<br> 
+        Gasto total de despesas mensal: R$ ${gastoTotal}. `;
+
+    }   
+</script>
