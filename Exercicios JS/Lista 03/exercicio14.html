@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+    <center>
+        <h1>Dragon ball</h1>
+        <br><br>
+        Ki base: <input type="number" id="ipt_ki">
+        <br><br>
+        Trasnformar em:
+        <br><br>
+        <button onclick="transformarSsj1()">SSJ</button>
+        <button onclick="transformarSsj2()">SSJ2</button>
+        <button onclick="transformarSsj3()">SSJ3</button>
+        <br><br>
+        <div id="div_message"></div>
+    </center>
+</body>
+</html>
+
+<script>
+    var ki = 0;
+    var estado = "";
+    
+    function transformarSsj1(){
+        ki = Number(ipt_ki.value) * 50;
+        estado = 'SSJ'
+        div_message.innerHTML = `Após se transformar em ${estado}, o ki desse Sayajin passa a ser de ${ki}`
+    }
+    function transformarSsj2(){
+        ki = Number(ipt_ki.value) * 100;
+        estado = 'SSJ2'
+        div_message.innerHTML = `Após se transformar em ${estado}, o ki desse Sayajin passa a ser de ${ki}`
+    }
+    function transformarSsj3(){
+        ki = Number(ipt_ki.value) * 200;
+        estado = 'SSJ3'
+        div_message.innerHTML = `Após se transformar em ${estado}, o ki desse Sayajin passa a ser de ${ki}`
+    }
+</script>
+
+<!-- 14. Na franquia de desenhos animados “Dragon Ball”, existe a raça guerreira “Saiyajin”, que pode se transformar para obter diferentes níveis de poder. 
+
+Crie um programa que demonstre como o poder de guerreiros Sayajins aumenta na medida em que se transformam:  
+
+a) Solicite o "ki base" (força base) do guerreiro Sayajin;  
+
+b) Abaixo, deve haver o texto "Transformar em...";  
+
+c) Abaixo, devem haver os botões "SSJ", "SSJ2", "SSJ3", lado a lado entre si;  
+
+d) Ao clicar num dos botões, é calculado o novo ki do Sayajin conforme a regra de cada transformação:  
+
+    SSJ: ki base x 50  
+
+    SSJ2: ki base x 100  
+
+    SSJ3: ki base x 200  
+
+e) O valor do novo ki deve aparecer abaixo com uma frase como esta:  
+
+    Após se transformar em X, o ki desse Sayajin passa a ser de Y 
+
+    Onde X é o nome da transformação (SSJ, SSJ2 ou SSJ3) e Y é o valor calculado em d)   -->

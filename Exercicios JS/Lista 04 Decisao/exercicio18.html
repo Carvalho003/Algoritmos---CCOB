@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 18</title>
+</head>
+<body>
+    Primeira nota:
+    <input type="number" id="ipt_n1">
+    <br><br>
+    Segunda nota:
+    <input type="number" id="ipt_n2">
+    <br><br>
+    <button onclick="verificar()">Verificar situação</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var n1 = Number(ipt_n1.value);
+        var n2 = Number(ipt_n2.value);
+        var media = (n1+n2)/2;
+        if(media >= 6){
+            div_msg.innerHTML = `Parabéns, aprovado!`;
+        }else{
+            div_msg.innerHTML = `Tente outra vez...`
+        }
+    }
+</script>
+
+<!-- 18. Crie um programa o qual: 
+
+a) Solicite 2 notas de um aluno 
+
+b) Ao clicar em "Verificar situação", calcule sua média e... 
+
+c) Caso a média seja a partir de 6, exiba "Parabéns, aprovado!" 
+
+d) Caso a média seja menor que 6, exiba "Tente outra vez..."  -->

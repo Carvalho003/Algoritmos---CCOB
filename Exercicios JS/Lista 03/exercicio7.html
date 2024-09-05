@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7 pagar 50 receber 100 </title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <h1>Controle de saldo</h1>
+    <button onclick="receber()">Receber 100</button>
+    <button onclick="pagar()">Pagar 50</button>
+    <div id="div_mensagem"></div>
+</body>
+
+</html>
+
+<script>
+    var saldo =0
+
+    function receber(){
+        saldo =saldo + 100
+        div_mensagem.innerHTML = `<h1>Transferência de R$100 recebida! Saldo atual: R$${saldo}</h1>`
+    }
+
+    function pagar(){
+        saldo =saldo - 50
+        div_mensagem.innerHTML = `<h1>Transferência de R$100 recebida! Saldo atual: R$${saldo}</h1>`
+    }
+</script>

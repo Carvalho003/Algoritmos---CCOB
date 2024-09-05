@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+</head>
+<body>
+    Ultima série que assistiu: 
+    <input type="text"  id="ipt_serie">
+    <br><br>
+    Quantos episódios:
+    <input type="number"  id="ipt_qtdEp">
+    <br><br>
+    <button onclick="verificar()">Verificar nível</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    function verificar(){
+        var serie = ipt_serie.value
+        var tempoGastoMin = Number(ipt_qtdEp.value) * 22;
+        var tempoGastoHoras = tempoGastoMin/60;
+
+        div_msg.innerHTML = `Vejo que você gosta da série ${serie}`;
+
+        if(tempoGastoHoras > 30){
+            div_msg.innerHTML += `<br>Uau, você realmente gosta dessa série`; 
+        }
+    }
+</script>

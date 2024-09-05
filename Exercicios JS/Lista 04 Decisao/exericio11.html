@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    Quantidade de filhos:
+    <input type="number" id="ipt_filhos">
+    <br><br>
+    <button onclick="analisar()">Analisar família</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var filhos = Number(ipt_filhos.value);
+        if(filhos > 0){
+            div_msg.innerHTML = `Não tem TV<br>`;
+            if(filhos > 1){
+                div_msg.innerHTML += `Não tem internet<br>`;
+                if(filhos >2){
+                    div_msg.innerHTML += `Não tem video game<br>`;
+                    if(filhos>3){
+                        div_msg.innerHTML += `Não tem Netflix`;
+                    }
+                }
+            }
+        }else{
+            div_msg.innerHTML = `Número de filhos inválido`;
+        }
+    }
+</script>

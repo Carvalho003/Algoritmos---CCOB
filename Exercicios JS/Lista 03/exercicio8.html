@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08 Valor a depositar/retirar</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        flex-direction: column;
+    }
+</style>
+<body>
+    <h1>Sistema de Deposito/Retirada</h1>
+    
+    <div style="flex-direction: row;">
+        <label for="Valor a ser depositado">Valor:</label>
+        <input placeholder="Ex: 19.99" id="ipt_valor">
+
+    </div>
+    <div style="flex-direction: row;">
+        <button onclick="depositar()">Depositar</button>
+        <button onclick="retirar()">Retirar</button>
+    </div>
+    <div id="div_msg"></h1>
+</body>
+</html>
+
+<script>
+    var saldo =0;
+    function depositar() {
+        var valor = Number(ipt_valor.value)
+        saldo = saldo + valor
+        div_msg.innerHTML = `<h1> - Depósito de R${valor} efetuado! Saldo atual: R$${saldo} </h1>`
+    }
+    function retirar() {
+        var valor = Number(ipt_valor.value)
+        saldo = saldo - valor
+        div_msg.innerHTML = `<h1> - Retirada de R${valor} efetuada! Saldo atual: R$${saldo} </h1>`
+        
+    }
+</script>

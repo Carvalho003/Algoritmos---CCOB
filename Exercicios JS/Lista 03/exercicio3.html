@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        gap: 10%;
+    }
+    
+</style>
+<body>
+    <h1>Quanto você vai economizar</h1>
+    <label for="Valor da passagem">Insira o valor da passagem:</label>
+    <input id="ipt_valorPassagem">
+    <label for="Quantas viagens">Insira quantas viagens você fará por mês</label>
+    <input id="ipt_quantasViagens">
+    <button onclick="calcularEconomia()">Ver econômia</button>
+
+</body>
+<script>
+    function calcularEconomia(){
+        alert("Você economizará R$" + ((ipt_valorPassagem.value * ipt_quantasViagens.value)/2))
+    }
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <center>
+    <h1>Eleições</h1>
+    
+        Votos Candidato A:
+        <input  id="ipt_cadA">
+        <br><br>
+        Votos Candidato B:
+        <input  id="ipt_cadB">
+        <br><br>
+        Votos em branco: 
+        <input  id="ipt_branco">
+        <br><br>
+        Votos em nulo: 
+        <input  id="ipt_nulo">
+        <br><br>
+    
+    <button onclick="calcular()">Resultado da Eleição</button>
+    <div id="div_msg"></div>
+    </center>
+
+</body>
+</html>
+<script>
+
+   
+
+    
+    function calcular(){
+        var candidatoA = Number(ipt_cadA.value)
+        var candidatoB = Number(ipt_cadB.value)
+        var branco = Number(ipt_branco.value)
+        var nulo = Number(ipt_nulo.value)
+        var invalidos = nulo + branco
+        var total = candidatoA + candidatoB + invalidos
+
+        div_msg.innerHTML = `<p>Total de votos: 200</p>  
+
+        <p>Candidato A: ${(candidatoA*100)/total}% (${candidatoA} votos)</p>  
+
+        <p>Candidato B: ${(candidatoB*100)/total}% (${candidatoB} votos)</p>  
+
+        <p>Inválidos: ${(invalidos*100)/total}% (${invalidos} votos)</p>`
+    }
+    
+    
+   
+
+</script>

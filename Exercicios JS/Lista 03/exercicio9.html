@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9 sono</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+   
+</style>
+<body>
+    <h1>Regulagem de sono</h1>
+    <label for="Quantas horas de sono">Informe quantas horas você dormiu?</label>
+    <input id="ipt_horas">
+    <button onclick="calcular()">Calcular Sono</button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    function calcular(){
+        var horas = ipt_horas.value;
+        var fase1 = horas * 0.05;
+        var fase2 = horas * 0.45;
+        var fase3 = horas * 0.3;
+        var rem = horas * 0.2;
+        div_msg.innerHTML = `
+        <span>Ao dormir ${horas} horas, você dormiu: </span> 
+
+    <p>${fase1} horas na fase 1</p>
+
+    <p>${fase2} horas na fase 2  </p>
+
+    <p>${fase3} horas na fase 3 </p> 
+
+    <p>${rem} horas na fase REM  </p>
+        
+        `
+
+        
+
+    }
+</script>

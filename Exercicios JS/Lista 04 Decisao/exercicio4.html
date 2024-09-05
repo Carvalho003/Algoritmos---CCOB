@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <h1>Bora comer pizza!</h1>
+    <br><br>
+    Qual o valor da pizza? <input type="text" id="ipt_valor">
+    <br><br>
+    Quantos amigos vão comer? <input type="text" id="ipt_qtdAmigos">
+    <br><br>
+    <button onclick="calcularValorParaCada()">Rola Pizza?</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcularValorParaCada(){
+        var valor = Number(ipt_valor.value)
+        var qtdAmigos = Number(ipt_qtdAmigos.value)
+
+        var valorParaCada = valor/qtdAmigos;
+
+        div_msg.innerHTML = `Cada amigo vai pagar R$${valorParaCada} pela pizza`
+
+        if(valorParaCada > 20){
+            div_msg.innerHTML += `<br>Deu ruim! Pizza muito cara!`
+        }
+    }
+</script>
+
+<!-- 4. Um grupo de amigos costuma se reunir na casa de um deles para comer pizza. Só que eles têm um trato de que o valor da pizza, quando dividido entre os amigos, não deve passar de 20,00 por amigo. Ajude-os criando um programa o qual: 
+
+a) Pergunte o valor da pizza 
+
+b) Pergunte a quantidade de amigos reunidos 
+
+c) Ao clicar em "Rola a pizza?", calcule e exiba o valor que cada amigo vai pagar na pizza com uma frase na página como esta "Cada amigo vai pagar R$X pela pizza" 
+
+d) Somente caso o valor por amigo passe de R$20,00, exiba também a frase "Deu ruim! Pizza muito cara!"  -->

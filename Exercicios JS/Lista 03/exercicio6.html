@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06 Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <label for="Primeiro numero">Digite o primeiro número</label>
+    <input id="ipt_n1">
+    <br>
+    <label for="Segundo numero">Digite o segundo número</label>
+    <input id="ipt_n2">
+    <br>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+
+    <div id="div_mensagem"></div>
+</body>
+<script>
+    function somar(){
+        var n1 = Number(ipt_n1.value)
+        var n2 = Number(ipt_n2.value)
+        var soma = n1+n2
+        div_mensagem.innerHTML = `<h1>A soma entre ${n1} e ${n2} é ${soma}</h1>` 
+    }
+    function subtrair(){
+        var n1 = Number(ipt_n1.value)
+        var n2 = Number(ipt_n2.value)
+        var subtracao = n1-n2
+        div_mensagem.innerHTML = `<h1>A diferença entre ${n1} e ${n2} é ${subtracao}</h1>` 
+    }
+    function dividir(){
+        var n1 = Number(ipt_n1.value)
+        var n2 = Number(ipt_n2.value)
+        var divisao = n1/n2
+        div_mensagem.innerHTML = `<h1>A razão entre ${n1} e ${n2} é ${divisao}</h1>` 
+    }
+    function multiplicar(){
+        var n1 = Number(ipt_n1.value)
+        var n2 = Number(ipt_n2.value)
+        var multiplicacao = n1*n2
+        div_mensagem.innerHTML = `<h1>O produto entre ${n1} e ${n2} é ${multiplicacao}</h1>` 
+    }
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        gap: 10%;
+    }
+    
+</style>
+<body>
+    <h1>Qual é seu time?</h1>
+    <label for="Seu time">Digite o nome do seu time:</label>
+    <input id="ipt_time"/>
+    <label for="Quantidade de titulos">Quantos times seu time tem?</label>
+    <input id="ipt_titulos"/>
+    <button onclick="exibirInformacoes()">Amo meu time</button>
+</body>
+
+<script>
+    function exibirInformacoes() {
+        alert("O time " +ipt_time.value +  " tem "+ ipt_titulos.value + " títulos")
+    }
+</script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        gap: 10%;
+    }
+    
+</style>
+<body>
+    <h1>Informe dois números:</h1>
+    <input id="ipt_numero1">
+    <input id="ipt_numero2">
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="dividir()">Dividir</button>
+</body>
+
+<script>
+    function multiplicar(){
+        alert("O resultado da multiplicação é "+ ipt_numero1.value * ipt_numero2.value)
+    } 
+    function somar(){
+        alert("O resultado da soma é "+ Number(ipt_numero1.value) + Number(ipt_numero2.value) ) 
+    }
+    function subtrair(){
+        alert("O resultado da subtração é "+ (Number(ipt_numero1.value) - Number(ipt_numero2.value) ))
+    }
+    function dividir(){
+        if(ipt_numero2.value == 0 ){
+            alert("Impossivel dividir por 0")
+        }else{
+            alert("O resultado da divisão é "+ Number(ipt_numero1.value) / Number(ipt_numero2.value))
+        }
+
+    }
+    
+</script>
+</html>

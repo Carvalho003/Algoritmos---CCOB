@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome: 
+    <input type="text" id="i_nome">
+    <br><br>
+    Distancia:
+    <input type="number" id="i_dist">
+    <br><br>
+    Bandeira:
+    <input type="number" id="i_band" max="3" min="1">
+    <br><br>
+    Horario:
+    <input type="number" id="i_h" max="23" min="0"  id="horario">
+    <button onclick="calcular()">Calcular Corrida</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var nome = i_nome.value;
+        
+        var precoBase = Number(i_dist.value) * 1.25;
+        var band = Number(i_band.value);
+        var horario = Number(i_h.value);
+
+        var adicional = 0;
+        var base = 15
+        if(horario <=6){
+             base = 5;
+            adicional = precoBase /100*(band * base);
+        }
+        if(horario <=12){
+             base =10;
+            adicional =precoBase /100*(band * base);
+        }
+        
+        adicional = precoBase /100*(band * base);
+        var total = precoBase + adicional;
+        div_msg.innerHTML = `Olá ${nome} Sua corrida, será na bandeira ${band}, percorrerá ${i_dist.value} km e o total da corrida será de ${total}`;
+    }
+</script>

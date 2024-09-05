@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        gap: 10%;
+    }
+    
+</style>
+<body>
+    <h1>Calcular seu ki</h1>
+    <label for="Nome do guerreiro">Insira o nome do guerreiro:</label>
+    <input id="ipt_nome">
+    <label for="Ki normal">Insira o ki normal do guerreiro:</label>
+    <input id="ipt_ki">
+    <button onclick="mostrarKiEmCadaForma()">Ver KI em cada forma</button>
+
+</body>
+<script>
+    function mostrarKiEmCadaForma(){
+        alert("O ki do guerreiro "+ ipt_nome.value + "  na forma Super Sayajin é " + (ipt_ki.value * 50 ))
+        alert("O ki do guerreiro "+ ipt_nome.value + "  na forma Super Sayajin 2 é " + (ipt_ki.value * 100 ))
+        
+        
+    }
+</script>
+</html>

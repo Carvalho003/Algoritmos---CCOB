@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        gap: 10%;
+    }
+    
+</style>
+<body>
+    <h1>Calcular sua média?</h1>
+    <label for="Nota Continuada">Insira sua nota na continuada:</label>
+    <input id="ipt_notaContinuada">
+    <label for="Nota Semestral">Insira sua nota na semestral:</label>
+    <input id="ipt_notaSemestral">
+    <label for="Nome do aluno">Insira seu nome:</label>
+    <input id="ipt_nome">
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+</body>
+<script>
+    function calcularMedia(){
+        alert("A média de " + ipt_nome.value + " será de " + ((ipt_notaSemestral.value * 0.6) + (ipt_notaContinuada.value * 0.4)))
+    }
+</script>
+
+</html>

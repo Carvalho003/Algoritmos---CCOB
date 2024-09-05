@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        gap: 10%;
+    }
+    
+</style>
+<body>
+    <h1>Calcular valor que a pizza vai custar pra cada um</h1>
+    <label for="Valor da pizza">Insira o valor da pizza:</label>
+    <input id="ipt_valorPizza">
+    <label for="Quantidade de amigos">Insira a quantidade de amigos que vão pagar a pizza</label>
+    <input id="ipt_quantidadeAmigos">
+    <button onclick="calcularValorASerPago()">#lovePizza</button>
+
+</body>
+<script>
+    function calcularValorASerPago(){
+        alert("Cada um dos " + ipt_quantidadeAmigos.value + " amigos vai pagar R$" + (ipt_valorPizza.value / ipt_quantidadeAmigos.value))
+    }
+</script>
+</html>

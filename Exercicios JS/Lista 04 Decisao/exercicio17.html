@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 17</title>
+</head>
+<body>
+    Frequência do aluno:
+    <input type="number" id="ipt_frequencia">
+    <br><br>
+    <button onclick="analisar()">Analisar frequência</button>
+    <br><br>
+    <div id="div_img">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var frequencia = Number(ipt_frequencia.value);
+        div_img.innerHTML = `<img src="https://blog.ead.unipar.br/wp-content/uploads/2021/08/7.jpg" width="400px"><br><br><h1>Estudante</h1>`
+        if(frequencia < 50){
+            div_img.innerHTML = `<img src="https://st3.depositphotos.com/12982378/35274/i/450/depositphotos_352740142-stock-photo-shocked-traveler-hat-backpack-holding.jpg" width="400px"> <br><br><h1>Turista</h1>`;
+        }
+    }
+</script>
+
+<!-- 17. Crie um programa o qual: 
+
+a) Solicita a frequência do aluno 
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele: 
+
+    A imagem de um turista, caso a frequência for menor que 50 OU 
+
+    A imagem de um aluno estudioso, caso a frequência for a partir de 50  -->

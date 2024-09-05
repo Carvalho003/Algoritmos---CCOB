@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<style>
+    body{
+        display: grid;
+        place-items: center;
+        gap: 10%;
+    }
+    
+</style>
+<body>
+    <h1>Informe sua idade para saber quanto tempo falta para sua aposentadoria:</h1>
+    <input id="ipt_idade">
+    <button onclick="calcularAposentadoriaHomem()">Aposentadoria Homem</button>
+    <button onclick="calcularAposentadoriaMulher()">Aposentadoria Mulher</button>
+
+</body>
+<script>
+    function calcularAposentadoriaHomem(){
+        alert("Faltam " + (70 - ipt_idade.value) + " para se aposentar")
+    }
+    function calcularAposentadoriaMulher(){
+        alert("Faltam " + (60 - ipt_idade.value) + " para se aposentar")
+    }
+</script>
+</html>

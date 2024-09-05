@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <h1>Conta de luz</h1>
+    <br><br>
+    Quantidade de KWh consumida por mês: <input type="number" id="ipt_kwh">
+    <br><br>
+    <button onclick="calcularConta()">Calcular conta de luz</button>
+    <br><br>
+    
+</body>
+</html>
+
+<script>
+    function calcularConta(){
+        var kwh = Number(ipt_kwh.value);
+        var valorPorMes = kwh * 0.85;
+        if(kwh < 100){
+            valorPorMes = valorPorMes - (valorPorMes * 0.1)
+        }
+        alert("O valor a ser pago sera " + valorPorMes)
+    }
+</script>
+
+<!-- 5. Na cidade de Algoritmolândia a luz custa R$ 0,85 por KWh. Crie um programa que:  
+
+a) Solicite a quantidade de KWh consumida no mês 
+
+b) Ao clicar em "Calcular conta de luz", calcule o valor da conta no mês 
+
+c) Dê um desconto de 10% somente se a quantidade for menor que 100 KWh 
+
+d) Exiba um alert com o valor da conta a ser paga. 
+
+   -->

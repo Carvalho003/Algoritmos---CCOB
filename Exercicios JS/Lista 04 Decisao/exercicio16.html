@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+<body>
+    Qtd Chocolates Comprados:
+    <input type="number" id="ipt_qtdChoc">
+    <br><br>
+    <button onclick="calcular()">Compra</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var qtdChoc = Number(ipt_qtdChoc.value)
+        var valor = qtdChoc * 3;
+        if(qtdChoc > 12){
+            valor = qtdChoc * 2.5;
+        }
+
+        div_msg.innerHTML = `<h1>O valor da sua compra foi de ${valor}`;
+    }
+</script>
+
+<!-- 16. O Mercado BOM DOCE está em promoção, qualquer chocolate custa R$ 3,00 cada e se a compra for acima de uma dúzia de chocolates o preço cai para R$ 2,50 cada um. Criar um programa que auxilie o Mercado a calcular o valor da compra de chocolate 
+
+a) Solicite a quantidade de chocolates comprados 
+
+b) Após clicar num botão "Compra", exiba a mensagem "o valor da sua compra foi de XXX".   
+
+   -->

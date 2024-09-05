@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+</head>
+<body>
+    Saldo da sua conta:
+    <input type="number" id="ipt_saldo">
+    <br><br>
+    Valor do débito(Retirar da conta):
+    <input type="number"  id="ipt_debito">
+    <br><br>
+    <button onclick="analisar()">Analisar conta</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    
+    function analisar(){
+        var saldo = Number(ipt_saldo.value);
+        var retirada = Number(ipt_debito.value);
+        var novoSaldo = saldo - retirada;
+        div_msg.innerHTML = `<h1>O saldo atual da conta corrente é ${novoSaldo}</h1>`
+        if(novoSaldo < 0){
+            div_msg.innerHTML = `<h1 style="color:red;font-weight:bold;">O saldo atual da conta corrente é ${novoSaldo}</h1>`            
+        }    
+    }
+
+</script>

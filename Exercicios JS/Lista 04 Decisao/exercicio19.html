@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+<body>
+    Temperatura do ambiente:
+    <input type="number" id="ipt_temp">
+    <br><br>
+    <button onclick="verificar()">Verificar clima</button>
+    <br><br>
+    <div id="div_img"></div>
+    
+</body>
+</html>
+<script>
+    function verificar(){
+        var clima = Number(ipt_temp.value);
+        var imagem = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSau-Zxv54BXZ4bRpRyw-tJkvLd5JVxYKGhNQ&s"
+        if(clima < 10){
+            imagem = "https://www.hojeemdia.com.br/image/policy:1.573556.1628561463:1628561463/image.jpg?f=2x1&w=1000&";
+        }
+
+        div_img.innerHTML = `<img src=${imagem} width=400px/>`
+    }
+</script>
+<!-- 19. Crie um programa o qual:  -->
+
+<!-- a) Solicita a temperatura do ambiente 
+
+b) Ao clicar em "Verificar clima", determine se o clima está: 
+
+    Apropriada p/ conservar alimento - Caso a temperatura for menor que 10 
+
+    Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10 
+
+c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado. Caso contrário, exiba a imagem de um alimento estragado -->

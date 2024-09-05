@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+    Primeira nota: 
+    <input type="number" id="ipt_nota1">
+    <br><br>
+    Segunda nota:
+    <input type="number" id="ipt_nota2">
+    <br><br>
+    <button onclick="verificar()">Verificar Situação</button>
+
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var media = (Number(ipt_nota1.value) + Number(ipt_nota2.value))/2;
+        if(media < 6){
+            alert("Tente outra vez...")
+        }else{
+            alert("Parabéns, Aprovado!")
+        }
+    }
+</script>

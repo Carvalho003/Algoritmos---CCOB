@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6 </title>
+</head>
+<body>
+    <h1>financiamento de casa</h1>
+    <br><br>
+    Valor renda familiar : <input type="text" id="ipt_renda">
+    <br><br>
+    Valor prestação: <input type="text" id="ipt_prestacao">
+    <br><br>
+    <button onclick="verificarFinanciamento()">Verificar financiamento</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function verificarFinanciamento(){
+        var renda = Number(ipt_renda.value);
+        var prestacao = Number(ipt_prestacao.value);
+
+        var percentualRendaPrest = (prestacao/renda) * 100
+
+        div_msg.innerHTML = `A prestação corresponde a ${percentualRendaPrest}% da renda familiar`;
+
+        if( percentualRendaPrest > 30 ){
+            div_msg.innerHTML += `<br><b><p style="color:red;">Será necessário complementar a renda familiar</p></b>`
+        }
+    }
+</script>
+
+<!-- 6.  Crie um programa que auxilie um banco a identificar quem tem renda o suficiente para fazer o financiamento da casa própria.  
+
+a) Solicite o valor da renda familiar 
+
+b) Solicite o valor da prestação 
+
+c) Ao clicar em "Verificar financiamento", exiba na página a mensagem "A prestação corresponde a XX% da renda familiar" (divida a prestação pela renda e multiplique por 100) 
+
+d) Se o valor calculado acima for maior que 30%, exiba também a mensagem abaixo em negrito e em vermelho: 
+
+    "Será necessário complementar a renda familiar"   
+ -->
