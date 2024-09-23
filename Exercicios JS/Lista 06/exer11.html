@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+    Informe a quantidade de passagens que você deseja:
+    <input type="number" id="ipt_passagens">
+    <button onclick="comprar()">Comprar</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function comprar(){
+        var valor = 4.4;
+        var passagens =  Number(ipt_passagens.value);
+        var valorTotal = valor * passagens;
+        
+        if(passagens >= 8 && passagens <=50){
+            
+            if(passagens <= 19){
+                valorTotal = valorTotal * 0.97;
+            }else if(passagens <= 49 ){
+                valorTotal = valorTotal * 0.95;
+            }else{
+                valorTotal = valorTotal * 0.93;
+            }
+            div_msg.innerHTML = `Total a pagar: R$${valorTotal}`;
+
+
+        }else{
+            alert("Quantidade inválida para o Fidelidade!");
+        }
+
+    }
+</script>
