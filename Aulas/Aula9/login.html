@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe o usuario
+    <input type="text"  id="ipt_user">
+    <br>
+    Informe a senha
+    <input type="password"  id="ipt_sen">
+    <br>
+    <button onclick="validar()">Validar</button>
+</body>
+</html>
+
+<script>
+    function validar(){
+        var user = ipt_user.value
+        var senha = ipt_sen.value
+        
+        if((user == 'jp' || user == 'admin') && (senha == 'senha123' || senha == 'senhaForte')){
+            alert("user logado")
+        }else{
+            alert("senha ou user incorretos");
+        }
+    }
+</script>
