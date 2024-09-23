@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    Informe a temperatura
+    <input type="number" id="ipt_temp">
+    <button onclick="exibir()">Ver Situação</button>
+    <br>
+    
+</body>
+</html>
+
+<script>
+    function exibir(){
+        var temp = Number(ipt_temp.value);
+        //  if (temp >= 21){
+            
+        //     if(temp <= 24){
+        //         alert("Temperatura confortável :D")
+        //     }else{
+        //         alert("Temperatura DESCONFORTÁVEL")
+        //     }
+        // }else {        
+        //     alert("Temperatura DESCONFORTÁVEL");
+        // }
+        if(temp >= 21 && temp <= 24){
+            alert("confortavel");
+        }else{
+            alert("desconfortavel");
+        }
+
+        }
+    
+</script>
