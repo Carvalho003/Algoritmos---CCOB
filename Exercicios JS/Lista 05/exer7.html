@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    Informe quantos pães você come:
+    <input type="number" id="ipt_paes">
+    <br>
+    Informe quantos pacotes de bolacha:
+    <input type="number"  id="ipt_bolacha">
+    <br>
+    Informe quantos copos de achocolatado:
+    <input type="number" id="ipt_copos">
+    <button onclick="verificar()">Verificar Calorias</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var paesCal = Number(ipt_paes.value) * 50;
+        var bolachasCal = Number(ipt_bolacha.value) * 80;
+        var coposCal = Number(ipt_copos.value) * 70;
+        var totalCal = paesCal + bolachasCal + coposCal;
+
+        if(totalCal < 200){
+            div_msg.innerHTML = "Parabéns, vai ficar em forma!";
+        }else if (totalCal <= 400){
+            div_msg.innerHTML = "Cuidado, vai ficar menos saudável!";
+        }else{
+            div_msg.innerHTML = "Alerta crítico de saúde !!!";
+        }
+
+    }
+</script>
