@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07</title>
+</head>
+<body>
+    <input type="number" id="ipt_numero">
+    <br>
+    <button onclick="validar()">Validar</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function validar(){
+        var numero = Number(ipt_numero.value);
+        if(numero > 0){
+            if(numero <= 25){
+                div_msg.innerHTML = `O numero ${numero} é maior que zero e menor ou igual a 25`;
+            }else{
+                div_msg.innerHTML = `O numero ${numero} é maior que zero e maior que 25`;
+            }
+        }else{
+            div_msg.innerHTML = `O numero ${numero} é menor ou igual a zero`;
+        }
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07.1</title>
+</head>
+<body>
+    Informe sua bandeira:
+    <input type="text" id="ipt_bandeira">
+    <br>
+    <button onclick="verificar()">Verificar bandeira</button>
+    <br>
+    <div id="div_res"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var bandeira = ipt_bandeira.value;
+        if (bandeira == "amarela") {
+            div_res.innerHTML = `<p style="color:yellow">Sua bandeira é ${bandeira}</p>`
+        }else if (bandeira == "vermelha"){
+            div_res.innerHTML = `<p style="color:red">Sua bandeira é ${bandeira}</p>`
+        }else if(bandeira == "verde"){
+            div_res.innerHTML = `<p style="color:green">Sua bandeira é ${bandeira}</p>`
+        }
+    }
+</script>
