@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exericio 8</title>
+</head>
+<body>
+    Informe o nome da empresa:
+    <input type="text" id="ipt_empresa">
+    <br>
+    Infome o valor da bolsa da empresa:
+    <input type="number" id="ipt_bolsa">
+    <br>
+    Informe o valor do VR da empresa:
+    <input type="number" id="ipt_vr">
+    <br>
+    Informe o tempo de deslocamento para a SPTech:
+    <input type="number"id="ipt_desloc">
+    <br>
+    <button onclick="preferida()">É preferida?</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function preferida(){
+        var empresa =ipt_empresa.value;
+        var bolsa = Number(ipt_bolsa.value);
+        var vr = Number(ipt_vr.value);
+        var desloc = Number(ipt_desloc.value);
+        var mensagem = `A empresa ${empresa} está fora de sua lista`;
+        if(bolsa >= 1800 || vr >= 20 || desloc <=30){
+            mensagem = `A empresa ${empresa} é uma de suas preferências`;
+        }
+        div_msg.innerHTML = mensagem;
+    }
+</script>

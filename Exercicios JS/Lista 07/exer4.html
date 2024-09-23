@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    Informe o modo de pagamento:
+    <select  id="slt_modo">
+        <option value="din">Dinheiro</option>
+        <option value="deb">Cartão de débito</option>
+        <option value="cre">Cartão de crédito</option>
+        <option value="bol">Boleto</option>
+    </select>
+    <br>
+    <button onclick="analisar()">Analisar Compra</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var modo = slt_modo.value;
+        var mensagem = "Pagamento poderá ser parcelado"
+        if(modo == "din" || modo == "deb"){
+            mensagem = "Você terá que pagar a vista";
+        }
+
+        div_msg.innerHTML = mensagem;
+    }
+</script>

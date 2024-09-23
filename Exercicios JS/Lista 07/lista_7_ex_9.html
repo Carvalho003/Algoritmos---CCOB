@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+</head>
+<body>
+    Informe a marca da tv:
+    <select id="ipt_marca">
+        <option value="sa">Samsung</option>
+        <option value="lg">LG</option>
+        <option value="mon">Mondial</option>
+        <option value="br">Britânia</option>
+    </select>
+    <br>
+    Informe o preço da TV:
+    <input type="number" id="ipt_preco">
+    <br>
+    <button onclick="analisar()">Analisar Compra</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var marca =  ipt_marca.value;
+        var preco =  Number(ipt_preco.value);
+        
+       
+        if(preco < 800 || preco > 2000){
+            var mensagem = "TV fora da faixa de preço";
+            
+            if(preco < 800){
+                mensagem += "<br>Preço baixo demais!";
+            }else if(preco > 2000){
+                mensagem += "<br>TV cara demais, infelizmente";
+            }
+        }else{
+            mensagem = "Essa TV pode entrar na sua lista!";
+            if(marca == "mon" || marca == "br"){
+                mensagem = "Na faixa de preço, porém marca não confiável";
+            }
+        }   
+
+        div_msg.innerHTML = mensagem;
+    }
+</script>
