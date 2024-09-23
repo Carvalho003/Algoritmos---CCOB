@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    Informe a nota para o atendimento:
+    <input type="number"id="ipt_nota">
+    <br>
+    <button onclick="avaliar()">Avaliar Atendimento</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function avaliar(){
+        var nota = Number(ipt_nota.value);
+        var mensagem = "Aprovado";
+        if(nota >= 0 && nota <= 10 ){
+            mensagem = "Aprovado";
+            if(nota < 5){
+                mensagem = "Não aprovado";
+            }else if (nota <= 6){
+                mensagem = "Neutro";
+            }
+        }else{
+            mensagem = "Nota inválida";
+        }
+
+        div_msg.innerHTML = mensagem;
+
+    }
+</script>

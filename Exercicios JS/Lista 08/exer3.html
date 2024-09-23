@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    Informe o tipo de passagem:
+    <select  id="ipt_tipo">
+        <option value="1">Comum</option>
+        <option value="0.5">Estudante</option>
+        <option value="0">Idoso/PNE</option>
+    </select>
+    <br>
+    <select id="ipt_tipo2">
+        <option value="4.4">Passagem Única</option>
+        <option value="5.9">Passagem Integração</option>
+    </select>
+    <br>
+    <button onclick="simular()">Simular Preço</button>
+    <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    function simular(){
+        var tipo = Number(ipt_tipo.value)
+        var preco = Number(ipt_tipo2.value)
+        var valor = tipo * preco
+        div_msg.innerHTML = `Valor da passagem escolhida: R$${valor}`;
+        
+
+
+    }
+</script>
